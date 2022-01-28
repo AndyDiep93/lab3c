@@ -12,6 +12,7 @@
         
         <p><strong>Title: </strong><c:out value="${note.title}" /></p>
         <p><strong>Contents: </strong></p>
+        
         <p><c:out value="${note.contents}" /></p>
         
         <a href="note?edit">Edit</a>
