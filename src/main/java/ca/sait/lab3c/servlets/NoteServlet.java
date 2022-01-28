@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author andyd
+ * @author Andy Diep
  */
 public class NoteServlet extends HttpServlet {
 
