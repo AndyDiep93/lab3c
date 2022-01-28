@@ -1,4 +1,3 @@
-
 package ca.sait.lab3c.servlets;
 
 import ca.sait.lab3c.javabeans.Note;
@@ -32,27 +31,27 @@ public class NoteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String query = request.getQueryString();
-        
+
         if (query != null && query.contains("edit")) {
             //Display the edit form.
-            
+
             getServletContext().getRequestDispatcher("/WEB-INF/editnote.jsp").forward(request, response);
-        }else {
+        } else {
             //Display the note.
-        
-       String path = getServletContext().getRealPath("/WEB-INF/note.txt");
-       
-       BufferedReader br = new BufferedReader (new FileReader(new File(path)));
-       
-       String title = br.readLine();
-       String contents = br.readLine();
-       
-       Note note = new Note (title, contents);
-       
-       request.setAttribute("note", note);
-       
-     getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request, response);
-    }
+
+            String path = getServletContext().getRealPath("/WEB-INF/note.txt");
+
+            BufferedReader br = new BufferedReader(new FileReader(new File(path)));
+
+            String title = br.readLine();
+            String contents = br.readLine();
+
+            Note note = new Note(title, contents);
+
+            request.setAttribute("note", note);
+
+            getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request, response);
+        }
     }
 
     /**
@@ -68,16 +67,16 @@ public class NoteServlet extends HttpServlet {
             throws ServletException, IOException {
         String title = request.getParameter("title");
         String content = request.getParameter("contents");
-        
+
         String path = getServletContext().getRealPath("/WEB-INF/note.txt");
-        
-        PrintWriter pw = new PrintWriter(new BufferedWriter (new FileWriter(path, false)));
-        
+
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
+
         pw.println(title);
         pw.println(content);
-        
+
         pw.close();
-        
+
         response.sendRedirect("note");
     }
 }

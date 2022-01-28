@@ -9,12 +9,11 @@
     <body>
         <h1>Simple Note Keeper</h1>
         <h2>View Note</h2>
-        
+
         <p><strong>Title: </strong><c:out value="${note.title}" /></p>
         <p><strong>Contents: </strong></p>
-        
         <p><c:out value="${note.contents}" /></p>
-        
+
         <a href="note?edit">Edit</a>
     </body>
 </html>
