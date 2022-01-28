@@ -1,9 +1,3 @@
-<%-- 
-    Document   : editnote
-    Created on : Jan. 27, 2022, 1:20:56 p.m.
-    Author     : andyd
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
