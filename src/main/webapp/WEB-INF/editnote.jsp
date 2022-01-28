@@ -19,7 +19,6 @@
             <p>Title:
             <input type="text" name="title" id="title" placeholder="This is the title">
             </p>
-            
             <p>Contents: 
             <input type="text" name="contents" id="title" placeholder="Contents go here">
             </p>
