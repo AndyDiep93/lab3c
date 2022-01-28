@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <link rel="stylesheet" type="text/css" href="./css/lab3c styles.css>
       <html>
       <head>
